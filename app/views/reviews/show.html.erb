@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<strong>workout:</strong>
+<%= @review.workout.name %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+
+<% if @review.workout.nil? %>
+<%= link_to 'Back', reviews_path %>
+
+<% else %>
+<%= link_to 'Back', @review.workout %>
+<% end %>
